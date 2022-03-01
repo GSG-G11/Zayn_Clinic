@@ -1,6 +1,9 @@
-const deletePatient = (id) => fetch(`/delete-patient/${id}`, {
-  method: 'delete',
-});
+const deletePatient = (id) => {
+  console.log(id);
+  return fetch(`/delete-patient/${id}`, {
+    method: 'delete',
+  });
+};
 fetch('/patients')
   .then((res) => res.json())
   .then((patients) => {
@@ -22,6 +25,7 @@ fetch('/patients')
       deleteBtn.setAttribute('type', 'submit');
       deleteBtn.setAttribute('name', 'userID');
       deleteBtn.setAttribute('value', 'delete');
+      deleteBtn.setAttribute('id', patient.patient_id);
 
       patientRow.appendChild(patientName);
       patientRow.appendChild(patientAge);
@@ -30,7 +34,7 @@ fetch('/patients')
       container.appendChild(patientRow);
 
       deleteBtn.onclick = (e) => {
-        deletePatient(e.id);
+        deletePatient(e.target.id);
         container.removeChild(patientRow);
       };
     });
