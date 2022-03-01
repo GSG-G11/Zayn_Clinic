@@ -1,0 +1,187 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--main-color);
+}
+:root {
+  --main-color: #0957df;
+  --second-color: #eaedf4;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  height: 80px;
+  padding: 0 20px;
+}
+nav img {
+  width: 20px;
+}
+nav h2 {
+  font-size: 14px;
+}
+nav span {
+  font-weight: bold;
+  font-size: 24px;
+}
+nav .log-in-btn {
+  border: none;
+  border-radius: 30px;
+  height: 30px;
+  width: 130px;
+  padding: 0 10px;
+  color: var(--main-color);
+}
+#home {
+  height: fit-content;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+#home .home-img {
+  margin-bottom: 30px;
+}
+#home h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#home p {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#home .book-btn {
+  border: none;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 30px;
+  height: 60px;
+  width: 330px;
+}
+#about-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+#about-us h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+#about-us img {
+  width: 300px;
+  margin-bottom: 20px;
+}
+#about-us p {
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+#about-us .read-btn {
+  border: none;
+  background-color: #fff;
+  color: var(--main-color);
+  border-radius: 30px;
+  height: 60px;
+  width: 350px;
+}
+#our-team {
+  height: fit-content;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+#our-team h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--main-color);
+}
+.card {
+  text-align: center;
+  margin: 30px 20px;
+}
+.team-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+#booking {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#booking h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.booking-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  margin: 30px 0;
+}
+.booking-text h5 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.booking-text p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+#booking form {
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+#booking form .input {
+  border: none;
+  background-color: var(--second-color);
+  padding: 0 10px;
+  margin-bottom: 20px;
+  color: var(--main-color);
+  border-radius: 30px;
+  height: 40px;
+  width: 310px;
+}
+#booking form .submit {
+  background-color: var(--main-color);
+  color: #fff;
+  height: 40px;
+  width: 310px;
+  border: none;
+  border-radius: 30px;
+  margin-top: 10px;
+}
