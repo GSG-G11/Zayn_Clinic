@@ -6,5 +6,4 @@ const getData = () => {
   };
   return connection.query(sql);
 };
-console.log(getData());
 module.exports = getData;
