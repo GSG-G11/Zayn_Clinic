@@ -1,3 +1,6 @@
+const deletePatient = (id) => fetch(`/delete-patient/${id}`, {
+  method: 'delete',
+});
 fetch('/patients')
   .then((res) => res.json())
   .then((patients) => {
@@ -14,9 +17,21 @@ fetch('/patients')
       const date = document.createElement('p');
       date.textContent = patient.booking_date;
 
+      const deleteBtn = document.createElement('input');
+      deleteBtn.setAttribute('class', 'delete-btn');
+      deleteBtn.setAttribute('type', 'submit');
+      deleteBtn.setAttribute('name', 'userID');
+      deleteBtn.setAttribute('value', 'delete');
+
       patientRow.appendChild(patientName);
       patientRow.appendChild(patientAge);
       patientRow.appendChild(date);
+      patientRow.appendChild(deleteBtn);
       container.appendChild(patientRow);
+
+      deleteBtn.onclick = (e) => {
+        deletePatient(e.id);
+        container.removeChild(patientRow);
+      };
     });
   });
