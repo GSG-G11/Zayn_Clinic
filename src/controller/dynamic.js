@@ -10,9 +10,9 @@ const postAllData = (req, res) => {
 };
 
 const deleteSomeDate = (req, res) => {
-  const { userID } = req.body;
-  deleteDate(userID);
-  res.redirect('/login');
+  const { id } = req.body;
+  deleteDate(id);
+  res.redirect('/');
 };
 
 module.exports = { getAllData, postAllData, deleteSomeDate };
