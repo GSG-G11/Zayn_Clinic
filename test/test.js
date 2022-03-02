@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
+const supertest = require('supertest');
+const app = require('../src/app');
 const connection = require('../src/database/connection');
-// eslint-disable-next-line no-unused-vars
 const { dbBuild } = require('../src/database/build');
-// eslint-disable-next-line no-unused-vars
 const { getAllData, postAllData } = require('../src/controller/dynamic');
 
 test('jest is working', () => {
@@ -32,4 +32,38 @@ test('post user function', () => {
       expect(da.rows[1].age).toBe(age);
       expect(da.rows[1].data).toBe(data);
     });
+});
+
+// test end points
+describe('test endpoint', () => {
+  test('test for (/) endpoint', (done) => {
+    supertest(app).get('/')
+      .expect('Content-Type', 'text/html; charset=UTF-8')
+      .expect(200)
+      .end((err) => {
+        if (err) return done(err);
+        return done();
+      });
+  });
+  // eslint-disable-next-line no-undef
+  test('test the next endpoint -> (/patients)', (done) => {
+    supertest(app)
+      .get('/patients')
+      .expect('Content-Type', 'text/html; charset=UTF-8')
+      .expect(200)
+      .end((err) => {
+        if (err) return done(err);
+        return done();
+      });
+  });
+  // eslint-disable-next-line no-undef
+  test('test the not found error', (done) => {
+    supertest(app)
+      .get('/ghjgjh')
+      .expect(404)
+      .end((err) => {
+        if (err) return done(err);
+        return done();
+      });
+  });
 });
