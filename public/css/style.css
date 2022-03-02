@@ -10,7 +10,7 @@ body {
 }
 :root {
   --main-color: #0957df;
-  --second-color: #eaedf4;
+  --second-color: #e8e8e8;
 }
 nav {
   display: flex;
@@ -182,4 +182,40 @@ nav .log-in-btn {
   border: none;
   border-radius: 30px;
   margin-top: 10px;
+}
+@media only screen and (min-width: 600px) {
+  nav {
+    padding: 0 100px;
+  }
+  #home {
+    flex-direction: row-reverse;
+  }
+  .home-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #about-us {
+    height: 500px;
+  }
+  #our-team {
+    height: 500px;
+  }
+  .card {
+    background-color: var(--second-color);
+    height: 300px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+  }
+  #booking {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+  }
 }
