@@ -10,6 +10,7 @@ fetch('/patients')
     const container = document.querySelector('#container');
     patients.forEach((patient) => {
       const patientRow = document.createElement('dev');
+      patientRow.setAttribute('class', 'patient-row');
 
       const patientName = document.createElement('p');
       patientName.textContent = patient.patient_name;
@@ -21,6 +22,7 @@ fetch('/patients')
       date.textContent = patient.booking_date;
 
       const deleteBtn = document.createElement('input');
+
       deleteBtn.setAttribute('class', 'delete-btn');
       deleteBtn.setAttribute('type', 'submit');
       deleteBtn.setAttribute('name', 'userID');
