@@ -63,3 +63,8 @@ nav .log-in-btn {
   height: 30px;
   color: #fff;
 }
+@media only screen and (min-width: 600px) {
+nav {
+  padding: 0 100px;
+}
+}
