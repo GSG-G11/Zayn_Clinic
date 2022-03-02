@@ -15,7 +15,6 @@
   </head>
   <body>
     <nav>
-      <img src="./assets/menu-logo.png" />
       <h2><span>ZAYN </span>hospital</h2>
       <a href="./html/patients.html"
         ><button class="log-in-btn">Login As A Doctor</button></a
@@ -28,7 +27,7 @@
       <a href="#booking"><button class="book-btn">Book Now</button></a>
     </header>
     <div id="about-us">
-      <h3>Our Team</h3>
+      <h3>About Us</h3>
       <img src="./assets/about-us.png" />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, atque.
@@ -41,19 +40,19 @@
       <div class="cards">
         <div class="card">
           <img class="team-img" src="./assets/team-1.jpg" />
-          <h4>Name</h4>
+          <h4>D.Name lastName</h4>
         </div>
         <div class="card">
           <img class="team-img" src="./assets/team-2.jpg" />
-          <h4>Name</h4>
+          <h4>D.Name lastName</h4>
         </div>
         <div class="card">
           <img class="team-img" src="./assets/team-4.jpg" />
-          <h4>Name</h4>
+          <h4>D.Name lastName</h4>
         </div>
         <div class="card">
           <img class="team-img" src="./assets/team-3.jpg" />
-          <h4>Name</h4>
+          <h4>D.Name lastName</h4>
         </div>
       </div>
     </div>
@@ -64,11 +63,32 @@
         <p>Taha husain street</p>
         <p>+972 000 000 000</p>
       </div>
-      <h3>Booking</h3>
       <form action="/booking" method="post">
-        <input class="input" type="text" name="name" id="" />
-        <input class="input" type="number" name="age" id="" />
-        <input class="input" type="date" name="data" id="" />
+        <h3>Booking</h3>
+        <input
+          class="input"
+          placeholder="Enter Your Name"
+          type="text"
+          name="name"
+          id=""
+          required
+        />
+        <input
+          class="input"
+          placeholder="Enter Your Age"
+          type="number"
+          name="age"
+          id=""
+          required
+        />
+        <input
+          class="input"
+          placeholder="Choose Date"
+          type="date"
+          name="data"
+          id=""
+          required
+        />
         <input class="submit" type="submit" value="submit" />
       </form>
     </div>
